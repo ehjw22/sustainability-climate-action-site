@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More</title>
+    <link rel="icon" href="../images/planet-earth.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/navbar.css">
+    <link rel="stylesheet" href="../stylesheets/information.css">
+    <script src="../javascript/clickCard.js" defer></script>
+    <script src="../javascript/emergingTechFoodWasteGallery.js" defer></script>
+    <script src="../javascript/quiz.js" defer></script>
+</head>
+
+<body class="d-flex flex-column m-0 p-0">   
+    <!-- Navigation bar -->
+    <header class="sticky-md-top">
+        <nav class="navbar navbar-expand-lg bg-success py-3">
+            <div class="container">
+                <a class="navbar-brand text-center d-flex justify-content-center align-items-center" href="index.html">
+                    <img src="../images/planet-earth.png" class="img-fluid d-inline-block align-text-top me-3" alt="" height="70" width="70"> <!--image from flaticon.com-->
+                    <span class="fw-bold display-5 text-light">Sustainability</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#susNavBar" aria-controls="susNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0 fs-2" id="susNavBar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="form.html">Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+        <div id="titleHeader" class="d-flex flex-column justify-content-center">
+            <p class="display-1 text-center fw-medium lead text-light" id="titleText">Towards a Sustainable Future</p>
+        </div>
+        
+        <!-- offcanvas -->
+        <div class="d-md-block d-none">
+            <a class="btn btn-primary position-fixed bottom-0 mb-3 ms-3" id="menu" data-bs-toggle="offcanvas" href="#navigationOffCanvas" role="button" aria-controls="navigationOffCanvas">
+                <img src="../images/menuButton.png" class="p-0" width="100" height="100" alt=""> <!--image from flaticon.com-->
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="navigationOffCanvas" aria-labelledby="offcanvasTitle">
+                <div class="offcanvas-header align-items-center">
+                    <div class="d-flex align-items-center">
+                        <img src="../images/planet-earth.png" class="img-fluid me-3" alt="" height="30" width="30"> <!--image from flaticon.com-->
+                        <h3 class="offvancas-header" id="offcanvasTitle">Sustainability</h3>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="dropdown mt-3">
+                        <ul class="text-wrap">
+                            <li>
+                                <a class="dropdown-item" href="#zeroWasteContainer">Zero Waste Principles</a>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#zeroWasteContainer">What are the Zero Waste Principles</a></li>
+                                    <li><a class="dropdown-item" href="#zeroWasteMatters">Why It Matters</a></li>
+                                    <li><a class="dropdown-item" href="#zeroWasteRWE">Real World Examples</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#sustainableFood">Making Sustainable Food Options</a>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#sustainableFood">Making Sustianable Food Options</a></li>
+                                    <li><a class="dropdown-item" href="#foodMatters">Why It Matters</a></li>
+                                    <li><a class="dropdown-item" href="#foodEmergingTech">Emerging Technologies Helping to Reduce Food Waste</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#energyContainer">Conserving Energy at Home</a>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#energyContainer">Conserving Energy at Home</a></li>
+                                    <li><a class="dropdown-item" href="#energyMatters">Why It Matters</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#quizSection">Test Your Knowledge</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- back to top button -->
+        <div class="container-fluid">
+            <a class="btn btn-primary position-fixed bottom-0 end-0 mb-3 me-3" id="back2top" href="#" role="button">
+                <img src="../images/arrow-up.png" width="30" height="30" alt=""> <!--image from flaticon.com-->
+            </a>        
+        </div>
+        
+        <!-- transition and navigation -->
+        <div class="container mt-4 whatUCanDo">
+            <div class="text-center">
+                <p class="display-3 fw-bold text-dark"><u>What You Can Do to Make a Difference</u></p>
+            </div>
+            <div class="row text-dark">
+                <div class="col-12 col-md-6 fs-3 fw-bold d-flex flex-column justify-content-center text-md-end text-center">
+                    <a class="content-nav" href="#zeroWasteContainer">Adopt the Zero Waste Principles</a>
+                    <a class="content-nav" href="#sustainableFood">Make Sustainable Food Choices</a>
+                    <a class="content-nav" href="#energyContainer">Conserve Energy at Home</a>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-md-start justify-content-center">
+                    <img src="../images/enjoy-life-daily-planner-concept.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- what are the zero waste principles and real world examples -->
+        <div class="container-fluid mt-3 text-light py-2" id="zeroWasteSection">
+
+            <!-- zero waste principles click to flip -->
+            <div class="container-lg text-center my-4" id="zeroWasteContainer">
+                <p class="display-5 lead fw-bold"><u>What are the Zero Waste Principles?</u></p>
+                <div class="g-4 mt-1 row justify-content-center">
+                    <div class="flipCard">
+                        <div class="card_inner">
+                            <div class="card_face card_face-front" id="zeroWasteCard">
+                                <h1>What Are the Zero Waste Principles</h1>
+                            </div>
+                            <div class="card_face card_face-back">
+                                <div>
+                                    <p>The Zero-Waste Principles are: Refuse, Reduce, Reuse, Recycle, and Rot (Composting).</p>
+                                    <p>Each of these practises helps us strive for a zero-waste lifestyle.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flipCard">
+                        <div class="card_inner">
+                            <div class="card_face card_face-front" id="refusingDiv">
+                                <h1>Refusing</h1>
+                            </div>
+                            <div class="card_face card_face-back">
+                                <div>
+                                    <p>Before taking any item, pause to think about whether it is something you genuinely need, how frequently it will be used, and if it can be responsibly discarded once it is no longer useful. </p>
+                                    <p>Consider if the item has a meaningful function or if it’s likely to become trash that adds to landfill or incinerator waste. </p>
+                                    <p>For instance, when shopping, you can opt out of plastic bags or other disposable products to help minimize avoidable waste.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flipCard">
+                        <div class="card_inner">
+                            <div class="card_face card_face-front" id="reducingDiv">
+                                <h1>Reducing</h1>
+                            </div>
+                            <div class="card_face card_face-back">
+                                <div>
+                                    <p>Reducing is about minimizing waste by consuming less and using items more sustainably. </p>
+                                    <p>This can include simple actions like switching to a reusable water bottle instead of buying disposable plastic ones. </p>
+                                    <p>It also means avoiding impulse purchases and unnecessary upgrades. By choosing to consume less, we conserve resources, save money, and reduce clutter in our lives.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flipCard">
+                        <div class="card_inner">
+                            <div class="card_face card_face-front" id="reusingDiv">
+                                <h1>Reusing</h1>
+                            </div>
+                            <div class="card_face card_face-back">
+                                <div>
+                                    <p>Reusing means giving items a second life by using them again and extending their lifespan. This can involve repairing, repurposing, or finding new uses for a product instead of throwing it away.</p>
+                                    <p>For example, you can use reusable bags, bottles, and containers instead of single-use ones.</p>
+                                    <p>Items you no longer need can also be sold or donated, helping others while maximizing the usefulness of each item.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flipCard">
+                        <div class="card_inner">
+                            <div class="card_face card_face-front" id="recyclingDiv">
+                                <h1>Recycling</h1>
+                            </div>
+                            <div class="card_face card_face-back">
+                                <div>
+                                    <p>Recycling involves recovering and processing materials from products that have reached the end of their life cycle, so they can be transformed into new items instead of ending up in landfills or incinerators</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flipCard">
+                        <div class="card_inner">
+                            <div class="card_face card_face-front" id="rottingDiv">
+                                <h1>Rotting<br>(Composting)</h1>
+                            </div>
+                            <div class="card_face card_face-back">
+                                <div>
+                                    <p>Rotting refers to composting food scraps and other biodegradable materials, turning them into nutrient-rich soil instead of sending them to landfills.</p>
+                                    <p>This reduces waste, lowers greenhouse gas emissions, and helps improve soil health.</p>
+                                    <p>Common compostable items include fruit peels, vegetable scraps, and coffee grounds.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- why it matters -->
+            <div class="container my-5" id="zeroWasteMatters">
+                <p class="display-5 lead fw-bold text-center"><u>Why It Matters</u></p>
+                <div class="row">
+                    <div class="col-md-5 offset-md-1 d-flex justify-content-lg-end">
+                        <img src="../images/dishes-cutlery-ecological.jpg" class="img-fluid" alt=""> <!--image from freepik.com-->
+                    </div>
+                    <div class="col-md-6 col-lg-5 fs-6 fw-medium">
+                        <p>Reduces Landfill Waste: Prevents harmful chemicals and greenhouse gases from being released into the air, soil, and water.</p>
+                        <p>Conserves Resources: Encourages reuse, recycling, and composting, which saves raw materials and energy.</p>
+                        <p>Cuts Carbon Emissions: Less production and transportation means a smaller carbon footprint.</p>
+                        <p>Supports a Circular Economy: Keeps materials in use longer, creating jobs and reducing dependence on new resources.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- real world examples of zero waste-->
+            <div class="container" id="zeroWasteRWE">
+                <div class="d-flex justify-content-center align-items-center my-2">
+                    <p class="fw-bold display-5"><u>Real World Examples</u></p>
+                </div>
+                <div class="row mb-5 gy-3 text-light">
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/canadaRWE.jpg" class="card-img-top img-fluid" alt="Canada"> <!-- image from https://www.zerowaste.com/blog/zero-waste-communities-across-the-globe/-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Vancouver, Canada</h5>
+                                <p class="card-text">A Zero Waste Centre in Vancouver, Canada</p>
+                                <div class="text-end">
+                                    <a href="https://vancouver.ca/home-property-development/zero-waste-centre.aspx" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/taiwanRWE2.png" class="card-img-top img-fluid" alt="Taiwan"> <!--image from https://plasticsolution.org/project/zero-waste-in-taiwan/-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Taiwan</h5>
+                                <p class="card-text">From Garbage Island to Recycling Leader</p>
+                                <div class="text-end">
+                                    <a href="https://rapidtransition.org/stories/taiwans-transition-from-garbage-island-to-recycling-leader/" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/belgiumRWE.jpeg" class="card-img-top img-fluid" alt="Belgium"> <!--image from https://landlopers.com/2013/06/10/gent-belgium-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Flanders, Belgium</h5>
+                                <p class="card-text">Europe’s greatest zero-waste success story is here</p>
+                                <div class="text-end">
+                                    <a href="https://www.no-burn.org/wp-content/uploads/ZW-Flanders.pdf" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/kamikatsuJapanRWE.jpg" class="card-img-top img-fluid" alt="Kamikatsu Japan"><!-- image from https://www.zerowaste.com/blog/zero-waste-communities-across-the-globe/-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Kamikatsu, Japan</h5>
+                                <p class="card-text">The first Japanese declaration of Zero Waste</p>
+                                <div class="text-end">
+                                    <a href="https://why-kamikatsu.jp/en/" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/jollyECORWE.webp" class="card-img-top img-fluid" alt="Jolly ECO"> <!--image from https://thehoneycombers.com/singapore/zero-waste-groceries-bulk-stores-singapore/-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">JOLLY ECO</h5>
+                                <p class="card-text">Everything you need to live sustainably in one place</p>
+                                <div class="text-end">
+                                    <a href="https://www.jollyeco.sg/" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/unpacktRWE.png" class="card-img-top img-fluid" alt="Unpackt"> <!--image from https://www.greenguide.sg/listing/unpackt-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Unpackt</h5>
+                                <p class="card-text">Singapore's first zero-waste grocer and wholesaler</p>
+                                <div class="text-end">
+                                    <a href="https://unpackt.com.sg/" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/theSocialSpaceRWE.webp" class="card-img-top img-fluid" alt="The Social Space"> <!--image from https://thehoneycombers.com/singapore/zero-waste-groceries-bulk-stores-singapore/-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">The Social Space</h5>
+                                <p class="card-text">Creates multi-concept spaces to inspire social-impact</p>
+                                <div class="text-end">
+                                    <a href="https://thesocialspace.co/" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block col-xl-3 col-lg-4 col-md-6">
+                        <div class="card rweCard">
+                            <img src="../images/theGreenCollectiveRWE.webp" class="card-img-top img-fluid" alt="The Green Collective"> <!--image from https://thehoneycombers.com/singapore/zero-waste-groceries-bulk-stores-singapore/-->
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">The Green Collective</h5>
+                                <p class="card-text">Singapore’s only collective of eco-friendly products</p>
+                                <div class="text-end">
+                                    <a href="https://www.thegreencollective.sg/" target="_blank" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion d-md-none" id="accordionRWE">
+                        <!-- vancouver -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCanada" aria-expanded="false" aria-controls="collapseCanada">
+                            Vancouver, Canada
+                            </button>
+                            </h2>
+                            <div id="collapseCanada" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/canadaRWE.jpg" class="img-fluid w-100" alt="Canada"> <!-- image from https://www.zerowaste.com/blog/zero-waste-communities-across-the-globe/-->
+                                    <p class="my-3">The Vancouver Zero Waste Centre offers an easy-to-access spot where residents can drop off various items for recycling and reuse.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://vancouver.ca/home-property-development/zero-waste-centre.aspx" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- taiwan -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTaiwan" aria-expanded="false" aria-controls="collapseTaiwan">
+                            Taiwan
+                            </button>
+                            </h2>
+                            <div id="collapseTaiwan" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/taiwanRWE2.png" class="img-fluid w-100" alt="Taiwan"> <!--image from https://plasticsolution.org/project/zero-waste-in-taiwan/-->
+                                    <p class="my-3">Once nicknamed "Garbage Island," Taiwan transformed its waste management system and rapidly reduced its waste.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://rapidtransition.org/stories/taiwans-transition-from-garbage-island-to-recycling-leader/" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- japan -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJapan" aria-expanded="false" aria-controls="collapseJapan">
+                            Kamikatsu, Japan
+                            </button>
+                            </h2>
+                            <div id="collapseJapan" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/kamikatsuJapanRWE.jpg" class="img-fluid w-100" alt="Kamikatsu, Japan"> <!-- image from https://www.zerowaste.com/blog/zero-waste-communities-across-the-globe/-->
+                                    <p class="my-3">The first Japanese declaration of Zero Waste in 2003. A place with only one garbage collection site.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://why-kamikatsu.jp/en/" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- belgium -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBelgium" aria-expanded="false" aria-controls="collapseBelgium">
+                            Flanders, Belgium
+                            </button>
+                            </h2>
+                            <div id="collapseBelgium" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/belgiumRWE.jpeg" class="img-fluid w-100" alt="Belgium"> <!--image from https://landlopers.com/2013/06/10/gent-belgium-->
+                                    <p class="my-3">Flanders has emerged as a leader in waste management across Europe, achieving the continent’s highest rate of waste diversion.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://www.no-burn.org/wp-content/uploads/ZW-Flanders.pdf" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <!-- jolly eco -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJolly" aria-expanded="false" aria-controls="collapseJolly">
+                            Jolly Eco
+                            </button>
+                            </h2>
+                            <div id="collapseJolly" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/jollyECORWE.webp" class="img-fluid w-100" alt="JollyECO"> <!--image from https://thehoneycombers.com/singapore/zero-waste-groceries-bulk-stores-singapore/-->
+                                    <p class="my-3">Jolly Eco, everything you need for sustainable living, featuring reusable, non-toxic, high-quality products that are responsibly sourced.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://www.jollyeco.sg/" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- social space -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSocial" aria-expanded="false" aria-controls="collapseSocial">
+                            The Social Space
+                            </button>
+                            </h2>
+                            <div id="collapseSocial" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/theSocialSpaceRWE.webp" class="img-fluid w-100" alt="The Social Space"> <!--image from https://thehoneycombers.com/singapore/zero-waste-groceries-bulk-stores-singapore/-->
+                                    <p class="my-3">The Social Space develops multi-concept spaces aimed at inspiring social-impact champions in every aspect of its work, with the goal of building an economy for good.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://thesocialspace.co/" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- green collective -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGreen" aria-expanded="false" aria-controls="collapseGreen">
+                            The Green Collective
+                            </button>
+                            </h2>
+                            <div id="collapseGreen" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/theGreenCollectiveRWE.webp" class="img-fluid w-100" alt="The Green Collective"> <!--image from https://thehoneycombers.com/singapore/zero-waste-groceries-bulk-stores-singapore/-->
+                                    <p class="my-3">Green Collective is Singapore’s sole collective of eco-friendly products and the biggest curator of sustainable brands all in one place.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://www.thegreencollective.sg/" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- unpackt -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnpackt" aria-expanded="false" aria-controls="collapseUnpackt">
+                            Unpackt
+                            </button>
+                            </h2>
+                            <div id="collapseUnpackt" class="accordion-collapse collapse" data-bs-parent="#accordionRWE">
+                                <div class="accordion-body">
+                                    <img src="../images/unpacktRWE.png" class="img-fluid w-100" alt="Unpackt"> <!--image from https://thehoneycombers.com/singapore/zero-waste-groceries-bulk-stores-singapore/-->
+                                    <p class="my-3">A local social enterprise providing package-free bulk foods, products, and everyday essentials to support a zero waste lifestyle.</p>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://unpackt.com.sg/" target="_blank" class="btn btn-primary">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <!-- make sustainable food choices -->
+        <div class="container-fluid text-dark py-2" id="sustainableFood">
+            <div class="container-lg my-4">
+                <p class="display-5 lead fw-bold text-center"><u>Make Sustainable Food Options</u></p>
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="../images/sustainableFood.jpg" class="img-fluid h-100" alt="">
+                    </div>
+                    
+                    <!-- tabs for more information -->
+                    <div class="col-md-7 text-light rounded-3 mt-md-0 mt-3" id="sustainableFoodTabs">
+                        <div class="row p-3 h-100 align-items-stretch">
+                            <div class="col-5 nav flex-column nav-pills gap-3 flex-shrink-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <button class="nav-link tabClass active" id="plantBased-tab" data-bs-toggle="pill" data-bs-target="#plantBased" type="button" role="tab" aria-controls="plantBased" aria-selected="true">Eat More Plant-Based</button>
+                                <button class="nav-link tabClass" id="local-tab" data-bs-toggle="pill" data-bs-target="#local" type="button" role="tab" aria-controls="local" aria-selected="false">Buy Local & Seasonal</button>
+                                <button class="nav-link tabClass" id="avoid-tab" data-bs-toggle="pill" data-bs-target="#avoid" type="button" role="tab" aria-controls="avoid" aria-selected="false">Avoid Food Waste</button>
+                                <button class="nav-link tabClass" id="sustainableBrands-tab" data-bs-toggle="pill" data-bs-target="#sustainableBrands" type="button" role="tab" aria-controls="sustainableBrands" aria-selected="false">Choose Sustainable Brands</button>
+                                <button class="nav-link tabClass" id="reducePackage-tab" data-bs-toggle="pill" data-bs-target="#reducePackage" type="button" role="tab" aria-controls="reducePackage" aria-selected="false">Reduce Packaging Waste</button>
+                            </div>
+
+                            <div class="tab-content col-7" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="plantBased" role="tabpanel" aria-labelledby="plantBased-tab" tabindex="0">
+                                    <p>Animal agriculture (especially beef and lamb) is one of the largest contributors to methane emissions.</p>
+                                    <p>Shifting toward a diet rich in vegetables, legumes, grains, and fruits helps reduce your carbon footprint.</p>
+                                    <p>Even going meatless one day a week makes a difference.</p>
+                                </div>
+                                <div class="tab-pane fade" id="local" role="tabpanel" aria-labelledby="local-tab" tabindex="0">
+                                    <p>Imported food travels long distances, often by plane or ship, burning fossil fuels.</p>
+                                    <p>Support local farmers by choosing produce grown in your region.</p>
+                                    <p>Eating seasonally also means fewer resources were used to grow the food (e.g., no greenhouses or cold storage).</p>
+                                </div>
+                                <div class="tab-pane fade" id="avoid" role="tabpanel" aria-labelledby="avoid-tab" tabindex="0">
+                                    <p>Up to 30% of food globally is wasted, which also wastes the energy, water, and emissions that went into producing it.</p>
+                                    <p class="mb-0">Tips</p>
+                                    <ul class="mt-0">
+                                        <li>Plan your meals and only buy what you’ll use.</li>
+                                        <li>Learn how to store food properly (e.g. keep herbs in a jar of water, store fruits and vegetables separately).</li>
+                                        <li>Get creative with leftovers, turn scraps into soup, stir-fries, or compost them.</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="sustainableBrands" role="tabpanel" aria-labelledby="sustainableBrands-tab" tabindex="0">
+                                    <p class="mb-0">Look for food products with eco-certifications like:</p>
+                                    <ul class="mt-0">
+                                        <li>Fair Trade (ethical sourcing)</li>
+                                        <li>Rainforest Alliance Certified (sustainable farming)</li>
+                                        <li>Organic (no harmful pesticides or fertilizers)</li>
+                                    </ul>
+                                    <p>Choose companies committed to ethical labor practices, reducing packaging waste, or minimizing their environmental impact.</p>
+                                </div>
+                                <div class="tab-pane fade" id="reducePackage" role="tabpanel" aria-labelledby="reducePackage-tab" tabindex="0">
+                                    <p>Buy in bulk when possible.</p>
+                                    <p>Choose loose fruits and vegetables instead of pre-packaged.</p>
+                                    <p>Bring your own containers and bags when shopping.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </div>
+
+            <!-- why it matters -->
+            <div class="container my-5" id="foodMatters">
+                <p class="display-5 lead fw-bold text-center"><u>Why It Matters</u></p>
+                <div class="row">
+                    <div class="col-md-5 offset-md-1 d-flex justify-content-md-end justify-content-center">
+                        <img src="../images/top-view-woman-cuts-broccoli-cutting-board-with-colored-bell-peppers-eggplants-white-background.jpg" class="img-fluid" alt="Cutting food"> <!--image from freepik.com-->
+                    </div>
+                    <div class="col-md-6 col-lg-5 fs-6 fw-medium">
+                        <p>Lowers Climate Impact: Climate-friendly food choices cut greenhouse gas emissions throughout the supply chain.</p>
+                        <p>Preserves Vital Resources: Mindful eating reduces the overuse of water and fertile land.</p>
+                        <p>Protects Soil and Ecosystems: Sustainable farming safeguards soil health and wildlife habitats.</p>
+                        <p>Encourages Ethical and Responsible Practices: Choosing ethical sources supports fair labor and eco-friendly methods.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- emerging tech to help-->
+            <div class="container" id="foodEmergingTech">
+                <div class="d-flex justify-content-center align-items-center my-2">
+                    <p class="fw-bold display-5"><u>Emerging Technologies Helping to Reduce Food Waste</u></p>
+                </div>
+
+                <div id="filters" class="d-none d-lg-block filter-buttons">
+                    <button data-category="All">All</button>
+                    <button data-category="Farms">Farms</button>
+                    <button data-category="Shops">Shops</button>
+                    <button data-category="Restaurants">Restaurants</button>
+                    <button data-category="Households">Households</button>
+                </div>
+
+                 <!-- Gallery Container  -->
+                <section id="gallery" class="row g-4">
+                    
+                </section>
+            </div>
+        </div>
+
+        <!-- conserving energy at home -->
+        <div class="container-fluid mt-3 text-light py-2" id="conserveEnergySection">
+            <div class="container-lg text-center my-4" id="energyContainer">
+                <p class="display-5 lead fw-bold"><u>Conserve Energy at Home</u></p>
+                <div class="row gy-4">
+                    <div class="hoverCard col-md-6 col-lg-4">
+                        <div class="hoverCard_inner">
+                            <div class="hoverCard_front" id="leds">
+                                <h1>Switch to LEDs</h1>
+                            </div>
+                            <div class="hoverCard_back">
+                                <p>Use LEDs, which use up to 80% less energy than traditional incandescent bulbs and last much longer.</p>
+                                <p>They provide the same brightness with lower electricity consumption, making them a smart and cost-effective choice for every room in your home.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hoverCard col-md-6 col-lg-4">
+                        <div class="hoverCard_inner">
+                            <div class="hoverCard_front" id="unplug">
+                                <h1>Unplug Appliances</h1>
+                            </div>
+                            <div class="hoverCard_back">
+                                <p>Even when turned off, many devices like chargers, TVs, and microwaves continue to draw small amounts of power, phantom or standby energy.</p>
+                                <p>Unplugging them when not in use helps reduce unnecessary energy waste.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hoverCard col-md-6 col-lg-4">
+                        <div class="hoverCard_inner">
+                            <div class="hoverCard_front" id="aircon">
+                                <h1>Set Air Conditioner to 25°C</h1>
+                            </div>
+                            <div class="hoverCard_back">
+                                <p>Lowering the temperature by just 1°C can increase your energy use by up to 10%, so setting it a bit higher helps save significantly on electricity bills.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hoverCard col-md-6 col-lg-4">
+                        <div class="hoverCard_inner">
+                            <div class="hoverCard_front" id="naturalLight">
+                                <h1>Use Natural Light</h1>
+                            </div>
+                            <div class="hoverCard_back">
+                                <p>Instead of turning on lights or fans during the day, open your curtains and windows.</p>
+                                <p>Sunlight brightens your space naturally, and cross-ventilation helps keep the air cool without relying on electrical appliances.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hoverCard col-md-6 col-lg-4">
+                        <div class="hoverCard_inner">
+                            <div class="hoverCard_front" id="shower">
+                                <h1>Shorter Showers</h1>
+                            </div>
+                            <div class="hoverCard_back">
+                                <p>Water heaters consume a lot of energy.</p>
+                                <p>By taking shorter showers, you reduce the time the heater is running, saving both water and electricity, especially if you’re using hot water regularly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hoverCard col-md-6 col-lg-4">
+                        <div class="hoverCard_inner">
+                            <div class="hoverCard_front" id="neaAppliance">
+                                <h1>Buy 5-Tick Energy Efficient Appliances</h1>
+                            </div>
+                            <div class="hoverCard_back">
+                                <p>Look for appliances with a 5-Tick Energy Label certified by the NEA.</p>
+                                <p>These appliances use less electricity while maintaining strong performance, helping you save on your power bills without sacrificing quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- why it matters -->
+            <div class="container my-5" id="energyMatters">
+                <p class="display-5 lead fw-bold text-center"><u>Why It Matters</u></p>
+                <div class="row">
+                    <div class="col-md-5 offset-md-1 d-flex justify-content-md-end justify-content-center">
+                        <img src="../images/conserveEnergyatHome.jpg" class="img-fluid" alt="Conserving Energy"> <!--image from freepik.com-->
+                    </div>
+                    <div class="col-md-6 col-lg-5 fs-6 fw-medium">
+                        <p>Lowers Climate Impact: Using less energy reduces greenhouse gas emissions from power plants.</p>
+                        <p>Preserves Natural Resources: Energy conservation lessens the demand for fossil fuels, water, and other limited resources.</p>
+                        <p>Improves Air Quality: Cutting energy use means fewer pollutants released into the atmosphere.</p>
+                        <p>Supports Energy Security: Reducing demand helps maintain stable energy supplies and prevents grid overloads.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- form section testing their knowledge -->
+        <div class="container mt-4 d-flex flex-column justify-content-center" id="quizSection">
+            <p class="fw-bold display-5 text-center">Having learnt all these, time to test your knowledge!</p>
+            <form id="testKnowledge" class="col-12 col-md-8 col-lg-6 mx-auto rounded-3 text-light" novalidate>
+
+                <!-- questions and choices -->
+                <div id="quizQuestionArea" class="p-5 position-relative">
+                    <span id="quizCounter" class="fw-bold fs-5 position-absolute bottom-0 end-0 m-3">1</span>
+                    <div id="quizQuestion" class="mb-3 fw-bold fs-3"></div>
+                    <div id="quizChoices" class="mb-3 form-check"></div>
+                    <button type="button" id="submitAnsBtn" class="btn btn-primary">Submit Answer</button>
+                    <button type="button" id="redoQuizBtn" class="btn btn-secondary mt-2 w-100">Try Again</button>
+                </div>
+
+                <!-- feedback whether right or wrong, next question btn -->
+                <div id="quizFeedbackArea" class="p-5">
+                    <p id="message" class="fw-bold fs-4"></p>
+                    <p id="correctAnswer" class="fw-bold fs-4"></p>
+                    <p id="explanation"></p>
+                    <button type="button" id="nextQuestion" class="btn btn-primary">Next Question</button>
+                </div>
+            </form>
+         </div>
+
+        <!-- transition to form  -->
+        <div class="container">
+            <div class="row p-5">
+                <div class="col-lg-7 d-flex flex-column justify-content-center">
+
+                    <p class="fw-bold display-5">Knowing What You Can Do...</p>
+                    <p class="fw-medium lead">Take the next step, make your pledge to live more sustainably and help create a better future for our planet.</p>
+                    <a href="form.html" role="button" class="btn btn-success align-self-lg-end p-3 fs-5 mt-5 mb-3">Make My Pledge</a>
+                </div>
+
+                <div class="col-lg-5 d-flex justify-content-lg-end justify-content-center">
+                    <img src="../images/community-protesting-together-outdoors.jpg" alt="Community protesting ourdoors" class="img-fluid">    <!--image from www.freepik.com-->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- footer -->
+    <footer class="mt-auto bg-dark text-light">
+        <div class="container text-center d-flex flex-column justify-content-center align-items-center footerContent">
+
+            <span>&copy; 2025 Sustainability Matters. Made by Huang Jia Wei.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

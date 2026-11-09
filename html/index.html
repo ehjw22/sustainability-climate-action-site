@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability</title>
+    <link rel="icon" href="../images/planet-earth.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/navbar.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+    <script src="../javascript/toast.js" defer></script>
+</head>
+
+<body class="d-flex flex-column m-0 p-0">   
+    <!-- Navigation bar -->
+    <header class="sticky-md-top">
+        <nav class="navbar navbar-expand-lg bg-success py-3"> <!--only lg above will the whole navbar show-->
+            <div class="container">
+                <a class="navbar-brand text-center d-flex justify-content-center align-items-center" href="index.html">
+                    <img src="../images/planet-earth.png" class="img-fluid d-inline-block align-text-top me-3" alt="Logo" height="70" width="70"> <!--image from flaticon.com-->
+                    <span class="fw-bold display-5 text-light">Sustainability</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#susNavBar" aria-controls="susNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0 fs-2" id="susNavBar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="information.html">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="form.html">Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+        <!-- carousel and title -->
+        <div id="carouselSustainability" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- three lines at bottom -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselSustainability" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselSustainability" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselSustainability" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/backgroundForest.gif" alt="Forest Background Animation" class="d-block w-100" height="500"> <!-- gif from www.pinterest.com-->
+                    <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
+                        <h1 class="text-white display-1 fw-bold carouselTitle">Sustainability<br>and<br>Climate Action</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/seasAtRisk.jpeg" alt="Seas at risk environmental image" class="d-block w-100" height="500"> <!--image from https://environmentamerica.org/washington/updates/critical-kelp-conservation-measure-passes-washington-state-legislature/-->
+                    <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
+                        <h1 class="text-white display-1 fw-bold carouselTitle">Sustainability<br>and<br>Climate Action</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/coltDataCentre.jpg" alt="Data Center Image" class="d-block w-100" height="500"> <!-- image from https://delfortgroup.com/news/delfort-sbti-net-zero-standard/-->
+                    <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
+                        <h1 class="text-white display-1 fw-bold carouselTitle">Sustainability<br>and<br>Climate Action</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- buttons for going left and right -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSustainability" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSustainability" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+
+        <!-- toast fun facts -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="funFactContainer">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="../images/planet-earth.png" class="rounded me-2" height="30" width="30" alt="Logo"> <!--image from flaticon.com-->
+                    <strong class="me-auto fs-md-4">Fun Fact!!!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body text-dark">
+                    <p id="factContent"></p>
+                <div class="mt-2 pt-2 border-top d-flex flex-column">
+                    <a href="information.html" role="button" class="btn btn-success p-2">Explore More Ways to Take Action</a>
+                    <button class="btn bg-danger mt-2 text-light p-2" id="toastDisappear">Don't show this again</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- what sustainability -->
+        <div class="container-fluid mainContent">
+            <div class="container-lg">
+                <div class="row p-5">
+                    <p class="fw-bold display-5 text-center">What is Sustainability?</p>
+
+                    <div class="col-lg-5 col-md-12 d-flex justify-content-lg-start justify-content-center mb-3 order-lg-1 order-md-2">
+                        <iframe class="w-100" height="400" src="https://www.youtube.com/embed/99VrWNJyJ3E" title="What is SUSTAINABILITY? Explained By An Expert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="col-lg-7 col-md-12 order-md-1 order-lg-2 fw-medium lead">
+                        <div class="row g-lg-5">
+                            <div class="col-md-4 col-lg-12">
+                                <p>The definition of <a href="https://youtu.be/zx04Kl8y4dE" target="_blank" class="link">sustainability</a> as defined by the United Nations Brundtland Commision is "meeting the needs of the present without compromising the ability of future generations to meet their own needs"</p>
+                            </div>
+
+                            <div class="col-md-4 col-lg-12">
+                                <p>It has also been defined as "the balance between the environment, equity, and economy" by the University of California, Los Angeles.</p>
+                            </div>
+                            <div class="col-md-4 col-lg-12">
+                                <p>In simple terms, it refers to the ability to maintain or support a process continuously over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- why sustainability is important -->
+        <div class="container-fluid mainContent">
+            <div class="container-lg">
+                <div class="row p-5">   
+                    <p class="fw-bold display-5 text-center">Why is Sustainability important?</p>
+
+                    <div class="col-lg-4 col-md-12 d-flex justify-content-md-start justify-content-center order-md-3 order-lg-1">
+                        <img src="../images/sustainability2.jpeg" alt="Green Forest Landscape" class="img-fluid">    <!--image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aud.edu%2Faud-sustainability-initiatives%2F&psig=AOvVaw0LDoLpfQNS8B9Qepo9D9Nn&ust=1753446735880000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCKD926LA1Y4DFQAAAAAdAAAAABAi-->
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 order-md-1 fw-medium lead order-lg-2">
+                        <p>Sustainability is important for the health of our planet and the well-being of not only the present but also future generations.</p> 
+                        <p>Sustainability allows for individuals and businesses to address environmental challenges such as climate change and pollution which have become increasingly unpredictable and dangerous.</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 order-md-2 order-lg-3">
+                        <div class="fw-medium lead">
+                            <p>Climate change, driven by human activities, has dire consequences on the Earth, destroying ecosystems, threatening biodiversity and disrupting human societies across the globe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- what is climate action -->
+        <div class="container-fluid mainContent">
+            <div class="container-lg">
+                <div class="row p-5 align-items-center">
+
+                    <div class="col-lg-6 d-flex flex-column">
+
+                        <p class="fw-bold display-5 text-sm-center text-md-start">What is Climate Action?</p>
+                        <div class="fw-medium lead">
+                            <p>Climate action refers to the efforts being taken to combat climate change and mitigate its impacts. In recent years, due to human activity, the climate has become increasingly unstable, a trend that poses serious risks to both people and the planet.</p>
+                            <p>In order to slow down these effects, we must act immediately.</p>
+                            <p>Climate action can take many forms, including strategies, policies, and large-scale initiatives. It can also begin with individuals making smarter, more sustainable choices in their everyday lives.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex justify-content-lg-end justify-content-center">
+                        <img src="../images/young-activist-taking-action.jpg" alt=" Young Activist taking action against climate change" class="img-fluid">    <!--image from www.freepik.com-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- why is climate action important -->
+        <div class="container-fluid mainContent">
+            <div class="container-lg">
+                <div class="row p-5">
+
+                    <!-- why it is important -->
+                    <div class="col-lg-6 d-flex flex-column justify-content-start order-lg-2">
+
+                        <p class="fw-bold display-5 text-sm-center text-md-start">Why is Climate Action important?</p>
+                        <div class="fw-medium lead">
+                            <p>Climate action is important in order to slow down the impacts of climate change. If we do not act, the conseuqnces will be dire.</p>
+                            <p>We have already begun to feel these effects firsthand such as rising global temperatures, melting ice caps, more frequent extreme weather events, and steadily increasing sea levels. These not only threaten natural ecosystems but also impact human health, agriculture, and the stability of communities around the word.</p>
+                            <p>This has lead to communties and countries around the world to start taking action. One such example is the <a href="https://sdgs.un.org/goals/goal13" target="_blank" class="link">United Nations Sustainability Development Goals (UN SDGs) goal 13, Taking urgent action to combat climate change and its impact.</a></p>
+                        </div>
+                    </div>
+
+                    <!-- carousel showing impact of climate change -->
+                    <div id="climateChange" class="carousel slide carousel-fade col-lg-6 order-lg-1 h-100" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#climateChange" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#climateChange" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#climateChange" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../images/consequences1.jpeg" alt="Forest environmental consequences" class="w-100" height="500"> <!-- image from https://www.japantimes.co.jp/news/2020/08/31/world/crime-legal-world/environmental-crime-amazon-forest/-->
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/consequence2.jpg" alt="Extreme weather consequences" class="w-100" height="500"> <!-- image from https://www.bbc.com/news/science-environment-48104037-->
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/consequence3.webp" alt="Rising sea levels consequences" class="w-100" height="500"> <!-- image from https://www.nature.com/articles/d41586-024-00989-7-->
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#climateChange" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#climateChange" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+
+                    <!-- statistics to back up why it is important -->
+                    <div class="order-3 row container fw-medium lead my-5">
+                        <div class="col-lg-3 col-md-6">
+                            <p>Global Temperatures are Rising Consistently: The graph shows a steady increase in global mean temperature over the past four decades, indicating a persistent warming trend driven largely by human activities.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <p>Recent and Near-Future Temperatures Exceed Critical Thresholds: Forecasts for 2023 to 2025 show temperatures exceeding the 1.5°C limit set by the Paris Agreement to prevent severe climate impacts.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <p>Ongoing Warming Despite Climate Efforts: Current climate actions have not stopped the warming trend. Rising emissions show the urgent need for stronger measures to limit future temperature increases.</p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end justify-content-center order-lg-4">
+                            <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#enlargeImage">
+                                <img src="../images/climateChangeStats.png" alt=" Climate change statistics" class="img-fluid w-100">    <!--image from https://www.linkedin.com/posts/ozvarych_2024-was-the-hottest-year-on-record-and-the-activity-7287201015567724544-8YvX-->
+                            </button>
+                            <div class="modal fade" id="enlargeImage" data-bs-keyboard="true" tabindex="-1" aria-labelledby="enlargeImageLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <p id="enlargeImageLabel" class="visually-hidden">Climate Change Statistics</p>
+                                        <img src="../images/climateChangeStats.png" alt="Climate change statistics" class="img-fluid">    <!--image from https://www.linkedin.com/posts/ozvarych_2024-was-the-hottest-year-on-record-and-the-activity-7287201015567724544-8YvX-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- what you can do to make a difference -->
+        <div class="container-fluid mainContent">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="col-lg-7 d-flex flex-column justify-content-center">
+                        <p class="fw-bold display-5">What Can You Do to Make a Difference?</p>
+                        <p class="fw-medium lead">Everyone has a role to play in the fight against climate change. It could be as simple as lifestyle changes to community involvement, your actions matter more than you think.</p>
+                        <a href="information.html" role="button" class="btn btn-success align-self-lg-end p-3 fs-5 mt-5 mb-3">Explore More Ways to Take Action</a>
+                    </div>
+
+                    <div class="col-lg-5 d-flex justify-content-lg-end justify-content-center">
+                        <img src="../images/individualContribution.webp" alt="Individual contrbuting to climate action" class="img-fluid">    <!--image from https://www.spdigital.sg/stories/does-individual-climate-action-matter-->
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </main>
+    
+    <!-- footer -->
+    <footer class="mt-auto bg-dark text-light">
+        <div class="container text-center d-flex flex-column justify-content-center align-items-center" id="footerContent">
+            <span>&copy; 2025 Sustainability Matters. Made by Huang Jia Wei.</span>
+            <a href="#">Back to top</a>
+            <button class="btn bg-success mt-2 text-light p-2" id="toastAppear">Show Fun Facts</button>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

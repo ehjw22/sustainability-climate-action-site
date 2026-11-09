@@ -1,0 +1,11 @@
+.nav-link:hover {
+    color: rgb(151, 151, 151) !important;
+}
+
+.nav-item {
+    margin-left:30px;
+}
+
+::selection {
+    background-color: #90EE90;
+}

@@ -1,0 +1,33 @@
+/* styling links */
+a.link {
+    color: inherit; 
+    text-decoration: underline dotted; 
+    font-weight: 500; 
+    cursor: pointer;
+}
+
+a.link:hover {
+    color: #157347; 
+    text-decoration: underline solid;
+}
+
+/* alternating bg colors */
+.mainContent:nth-child(even) {
+    background-color: #588157;
+}
+
+.mainContent:nth-child(odd) {
+    background-color: #A3B18A;
+}
+
+.carouselTitle {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#footerContent {
+    height: 150px;
+}
+
+iframe {
+    border: 0;
+}

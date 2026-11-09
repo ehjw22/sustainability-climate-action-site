@@ -1,0 +1,300 @@
+body {
+    background-color:#A3B18A;
+}
+
+#zeroWasteContainer, #zeroWasteMatters, #zeroWasteRWE, #energyContainer, #energyMatters, #sustainableFood, #foodMatters, #foodEmergingTech, #quizSection {
+    scroll-margin-top: 120px; 
+}
+
+/* transition section and mini navigation */
+.content-nav {
+    color: black;
+}
+
+.content-nav:hover {
+    color: white;
+}
+
+/* back to top button */
+#back2top{
+    background: none; 
+    border:none;
+}
+
+/* background image with text */
+#titleHeader {
+    background-image: url(../images/high-tech-view-futuristic-earth.jpg);
+    background-size: cover;
+    height: 600px;
+    background-position: center;
+    display: flex;
+}
+
+#titleText {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* offcanvas */
+#menu {
+    background: none; 
+    border:none;
+}
+
+#navigationOffCanvas{
+    width: 300px;
+}
+
+.dropdown-item {
+    /* make text wrap to new lines */
+  white-space: normal !important;
+  overflow-wrap: break-word;
+}
+
+/* zero waste section */
+#zeroWasteSection{
+    background-color: #157347;
+}
+
+/* css to make the card flip */
+#zeroWasteContainer h1{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.flipCard {
+    width: 400px;
+    height: 300px;
+}
+
+.card_inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position:relative;
+}
+
+.card_inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card_face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+}
+
+.card_face-front, .card_face-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #588157;
+}
+
+.card_face-back {
+    font-weight: 500;
+}
+
+#zeroWasteCard{
+    background-image: url(../images/environmentally-friendly-disposable-recyclable-tableware-paper-food-boxes-plates-cutlery-cornstarch-green-grass-background.jpg); /* image from freepik.com*/
+    background-size: cover;
+}
+
+#refusingDiv{
+    background-image: url(../images/manSayingNo.jpg); /* image from freepik.com*/
+    background-size: cover;
+}
+
+#reducingDiv{
+    background-image: url(../images/woman-puts-lunch-boxes-bag.jpg); /* image from freepik.com*/
+    background-size: cover;
+}
+
+#reusingDiv{
+    background-image: url(../images/young-adult-reusing-fabric-material.jpg); /* image from freepik.com*/
+    background-size: cover;
+}
+
+#recyclingDiv{
+    background-image: url(../images/recycling-concept-flat-lay.jpg); /* image from freepik.com*/
+    background-size: cover;
+    background-position: center;
+}
+
+#rottingDiv{
+    background-image: url(../images/composition-compost-made-rotten-vegetables.jpg); /* image from freepik.com*/
+    background-size: cover;
+    background-position: center;
+}
+
+.card_face-back {
+    transform: rotateY(180deg);
+}
+
+.rweCard, .accordion-item, .accordion-button {
+    background-color: #DAD7CD;
+}
+
+/* sustainable food options section */
+#sustainableFood {
+    background-color: #A3B18A;
+}
+
+.tab-content {
+    height: 100%;
+}
+
+.tab-pane {
+    height: 100%;       /* fill parent's height */
+    min-height: 100%;   /* don't collapse if empty */
+}
+
+.tabClass{
+    color: white;
+    background-color: #588157;
+    padding: 7px;
+}
+
+@media (min-width: 769px) {
+#sustainableFoodTabs {
+    background-color: #157347; 
+    height: 430px;
+}
+}
+
+@media (max-width: 768px) {
+  #sustainableFoodTabs {
+    background-color: #157347; 
+    height: 400px;
+}
+}
+
+/* slight zoom effect on emerging tech */
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-buttons button {
+    background-color: #3A5A40;
+    color: white;
+    border: none;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.filter-buttons button:hover {
+    background-color: #2d3e36;
+}
+
+/* conserving energy section */
+#conserveEnergySection {
+    background-color: #157347;
+}
+
+.hoverCard {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.hoverCard_inner {
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 600ms;
+}
+
+.hoverCard_front, .hoverCard_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    padding: 50px;
+}
+
+.hoverCard_front{
+    background: #A3B18A;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    font-size: 1.85rem;
+}
+
+.hoverCard_back {
+    background: #3A5A40;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    color: white;
+}
+
+.hoverCard:hover .hoverCard_inner{
+    transform: rotateY(180deg);
+}
+
+#leds {
+    background-image: url(../images/led.jpeg); /*image from https://en.wikipedia.org/wiki/Light-emitting_diode*/
+    background-size: cover;
+}
+
+#unplug {
+    background-image: url(../images/unplugAppliances.png); /*image from https://www.thesimplysupported.com/blog/how-to-unplug*/
+    background-size: cover;
+}
+
+#aircon {
+    background-image: url(../images/aircon.jpeg); /*image from https://www.theecoexperts.co.uk/news/the-uk-needs-air-con*/
+    background-size: cover;
+}
+
+#naturalLight {
+    background-image: url(../images/naturalLight.webp); /*image from https://lightjourney.com.sg/blogs/articles/importance-of-lighting?srsltid=AfmBOoqeUFZVx3Dx5uGkL8pFK_x41emLZQbkyOoWevyZecn-kB8b0pXV*/
+    background-size: cover;
+}
+
+#shower {
+    background-image: url(../images/showers.jpeg); /*image from https://www.plumbersingapore.org/different-types-of-showers-for-modern-bathrooms/*/
+    background-size: cover;
+}
+
+#neaAppliance {
+    background-image: url(../images/neaStars.jpeg); /*image from https://infinityair.com.sg/guide-to-nea-energy-labels-and-ticks-for-air-conditioners/*/
+    background-size: cover;
+    background-position: center;
+}
+
+/* short quiz for users */
+#testKnowledge {
+    background: #588157;
+    height: 500px;
+    box-shadow: black 10px 10px;
+}
+
+/* footer */
+.footerContent {
+    height: 80px;
+}

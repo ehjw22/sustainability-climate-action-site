@@ -1,0 +1,62 @@
+body {
+  background-color: #A3B18A;
+  background-image: url(../images/bg-design-4.png); /*images from flaticon.com*/
+}
+
+#pledgeFormSection {
+  background-color: #588157;
+  box-shadow: 10px 10px;
+}
+
+.removeButton {
+  margin-left: auto;
+  border: none;
+  background: red;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.removeButton:hover{
+  background: rgb(171, 31, 31);
+}
+
+.itemDeco {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 1.2em; /* space for bullet */
+  list-style-type: none; /* remove default bullet */
+}
+
+.itemDeco::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  color: black;
+  line-height: 1;
+}
+
+ul{
+  padding-left:5px;
+}
+
+#addAction {
+  background-color: #DAD7CD;
+}
+
+#footerContent {
+  height: 80px;
+}
+
+#count_message {
+  z-index: 100;
+}
+
+/* Active input focus highlight */
+#nameInput:focus, #emailInput:focus, #numberInput:focus {
+  outline-offset: 2px;
+  box-shadow: 3px 3px !important;
+}
